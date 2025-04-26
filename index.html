@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="ca">
+<!DOCTYPE html><html lang="ca">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,17 +29,11 @@
     .animate-vibrar { animation: vibrar 0.3s ease-in-out infinite; }
   </style>
 </head>
-<body id="body" class="bg-cover bg-center flex flex-col items-center justify-center w-screen h-screen overflow-hidden text-white relative" style="background-image: url('https://summa.es/wp-content/uploads/2022/07/BARC%CC%A7A_1-1920x1184.jpg');">
-
-<!-- Pantalla d'espera millorada -->
-<div id="pantallaEspera" class="absolute inset-0 flex flex-col items-center justify-center animate-gradient text-center space-y-8">
+<body id="body" class="bg-cover bg-center flex flex-col items-center justify-center w-screen h-screen overflow-hidden text-white relative" style="background-image: url('https://summa.es/wp-content/uploads/2022/07/BARC%CC%A7A_1-1920x1184.jpg');"><!-- Pantalla d'espera millorada --><div id="pantallaEspera" class="absolute inset-0 flex flex-col items-center justify-center animate-gradient text-center space-y-8">
   <h1 class="text-7xl font-extrabold drop-shadow-xl">FINAL COPA DEL REI</h1>
   <p class="text-4xl font-semibold animate-pulse drop-shadow-xl">FC Barcelona vs Real Madrid</p>
   <p id="compteEnrere" class="text-4xl mt-8 font-bold glass px-8 py-4 rounded-full"></p>
-</div>
-
-<!-- Marcador del partit -->
-<div id="partit" class="hidden flex flex-col items-center justify-center space-y-10 w-full">
+</div><!-- Marcador del partit --><div id="partit" class="hidden flex flex-col items-center justify-center space-y-10 w-full">
   <div class="flex items-center justify-center glass p-10 rounded-3xl space-x-16">
     <div class="flex flex-col items-center">
       <img src="https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg" class="w-28 h-28">
@@ -53,14 +46,9 @@
     </div>
   </div>
   <div id="cronometre" class="absolute top-8 right-8 text-4xl bg-black bg-opacity-60 px-8 py-4 rounded-full shadow-xl">00:00</div>
-</div>
-
-<!-- Animació de Gol -->
-<div id="golCelebracio" class="hidden absolute inset-0 flex flex-col items-center justify-center bg-white bg-opacity-80">
+</div><!-- Animació de Gol --><div id="golCelebracio" class="hidden absolute inset-0 flex flex-col items-center justify-center bg-white bg-opacity-80">
   <div id="golText" class="text-9xl font-extrabold text-yellow-500 animate-rebotar drop-shadow-2xl">GOOOOOOL!!!</div>
-</div>
-
-<script>
+</div><script>
 let golsEquip1 = 0;
 let golsEquip2 = 0;
 const frasesMadrid = ["BUUUUU!", "Àrbitre comprat!", "VARdrid!", "Robo descarat!"];
@@ -153,11 +141,7 @@ window.addEventListener('keydown', (e) => {
   if (e.key === '1') afegirGolEquip1();
   if (e.key === '2') afegirGolEquip2();
 });
-</script>
-
-  <!-- Afegim CANVAS per confeti i focs exagerats -->
-<canvas id="confetiCanvas" class="hidden absolute inset-0 pointer-events-none"></canvas>
-<canvas id="focsCanvas" class="hidden absolute inset-0 pointer-events-none"></canvas>
+</script>  <!-- Afegim CANVAS per confeti i focs exagerats --><canvas id="confetiCanvas" class="hidden absolute inset-0 pointer-events-none"></canvas> <canvas id="focsCanvas" class="hidden absolute inset-0 pointer-events-none"></canvas>
 
 <script>
 let focsContext, focsParticles = [], confetiContext, confetiPieces = [];
@@ -243,7 +227,5 @@ function celebrarGolBarca() {
     document.getElementById('confetiCanvas').classList.add('hidden');
   }, 5000);
 }
-</script>
-
-</body>
+</script></body>
 </html>
